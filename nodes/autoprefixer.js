@@ -14,13 +14,12 @@ module.exports = function(registry) {
             this.__base(BEM.util.extend({ path : this.output }, o));
         },
 
+        /**
+         * @see https://github.com/ai/autoprefixer#browsers
+         * @returns {Array}
+         */
         getBrowsers : function() {
-            return [
-                '> 1%',
-                'last 2 versions',
-                'firefox 24',
-                'opera 12.1'
-            ];
+            return [];
         },
 
         make : function() {
