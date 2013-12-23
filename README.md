@@ -15,17 +15,24 @@ Configure your project's `.bem/make.js` to use `bem-tools-autoprefixer`:
 ```javascript
 // .bem/make.js
 
-require('bem-tools-autoprefixer')(MAKE);
+require('bem-tools-autoprefixer').extendMake(MAKE);
 
 MAKE.decl('BundleNode', {
 
     getTechs : function() {
-        return ['bemdecl.js', 'deps.js', 'css'];
+        return ['bemdecl.js', 'deps.js', 'css', 'prefix.css'];
     },
 
-    'create-css-node' : function(tech, bundleNode, magicNode) {
-        var sourceNode = this.__base.apply(this, arguments);
-        return this.createAutoprefixerNode(tech, sourceNode, bundleNode, magicNode);
+    'create-prefix.css-node' : function(tech, bundle, magic) {
+        return this.createDefaultTechNode.call(this, 'css', bundle, magic);
+    },
+
+    'create-prefix.css-optimizer-node' : function(tech, sourceNode, bundle) {
+        var borschikCss = this['create-css-optimizer-node'];
+        return borschikCss.apply(this, arguments).map(function(source) {
+            var node = this.createAutoprefixerNode(tech, source, bundle);
+            return borschikCss.call(this, tech, node, bundle);
+        }, this);
     }
 
 });
