@@ -52,14 +52,13 @@ MAKE.decl('AutoprefixerNode', {
 });
 ```
 
-See [autoprefixer browsers documentation][1] for more.
+See [autoprefixer browsers documentation](https://github.com/ai/autoprefixer#browsers) for more.
 
 --
 
 Autoprefixer parse CSS and add vendor prefixes to CSS rules using values from the [Can I Use][caniuse].
 
-[1]: https://github.com/ai/autoprefixer#browsers
 [bem-tools]: http://github.com/bem/bem-tools/
 [autoprefixer]: http://github.com/ai/autoprefixer/
-[caniuse] http://caniuse.com/
+[caniuse]: http://caniuse.com/
 
