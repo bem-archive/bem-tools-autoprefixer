@@ -4,13 +4,13 @@
 
 ## Usage
 
-1. Install with `npm`:
+Install with `npm`:
 
 ```
 › npm install bem-tools-autoprefixer
 ```
 
-2. Configure your project's `.bem/make.js` to use `bem-tools-autoprefixer`:
+Configure your project's `.bem/make.js` to use `bem-tools-autoprefixer`:
 
 ```javascript
 // .bem/make.js
@@ -36,7 +36,7 @@ MAKE.decl('BundleNode', {
 
 You can set browser you want to support in your project.
 
-```
+```javascript
 // make.js
 
 MAKE.decl('AutoprefixerNode', {
