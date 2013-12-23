@@ -1,0 +1,8 @@
+.button
+{
+    border: 0;
+
+    user-select: none;
+
+    box-shadow: 0 0 10px #fc0;
+}
