@@ -1,0 +1,34 @@
+{
+  "name": "bem-tools-autoprefixer",
+  "version": "0.0.1",
+  "description": "Use autoprefixer with bem-tools",
+  "main": "nodes/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bem/bem-tools-autoprefixer.git"
+  },
+  "keywords": [
+    "bem",
+    "bem-tools",
+    "autoprefixer"
+  ],
+  "author": "Vladimir Varankin <nek.narqo@gmail.com> (http://github.com/narqo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bem/bem-tools-autoprefixer/issues"
+  },
+  "homepage": "https://github.com/bem/bem-tools-autoprefixer",
+  "dependencies": {
+    "autoprefixer": "~1.0.20131222",
+    "q-io": "~1.10.6"
+  },
+  "peerDependencies": {
+    "bem": "0.7.x"
+  },
+  "devDependencies": {
+    "bem": "~0.7.4"
+  }
+}
