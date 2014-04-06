@@ -26,9 +26,9 @@
     "q-io": "~1.10.6"
   },
   "peerDependencies": {
-    "bem": "0.7.x"
+    "bem": ">=0.7.x <1.0"
   },
   "devDependencies": {
-    "bem": "~0.7.4"
+    "bem": "~0.8.0"
   }
 }
